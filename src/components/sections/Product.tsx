@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Shield, Zap, Globe, Lock } from "lucide-react";
+import networkAbstract from "@/assets/network-abstract.jpg";
 
 const Product = () => {
   const ref = useRef(null);
@@ -30,14 +31,16 @@ const Product = () => {
   ];
 
   return (
-    <section id="product" className="section-padding relative" ref={ref}>
+    <section id="product" className="section-padding relative overflow-hidden" ref={ref}>
       {/* Background accent */}
-      <div 
-        className="absolute inset-0 opacity-30"
-        style={{
-          background: "radial-gradient(ellipse at bottom center, hsl(0 0% 8%) 0%, transparent 60%)"
-        }}
-      />
+      <div className="absolute inset-0 opacity-10">
+        <img 
+          src={networkAbstract} 
+          alt="" 
+          className="w-full h-full object-cover scale-150"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+      </div>
 
       <div className="container-narrow relative z-10">
         <motion.div
@@ -65,9 +68,11 @@ const Product = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.1 * index, ease: [0.4, 0, 0.2, 1] }}
-              className="group border-gradient rounded-lg p-8 bg-card/30 backdrop-blur-sm hover:bg-card/50 transition-all duration-300"
+              className="group glass-card p-8 hover:scale-[1.02] transition-all duration-500"
             >
-              <feature.icon className="w-8 h-8 text-champagne mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <div className="glass rounded-2xl w-14 h-14 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-6 h-6 text-champagne" />
+              </div>
               <h3 className="font-syne text-xl font-semibold text-foreground mb-3">
                 {feature.title}
               </h3>
@@ -82,7 +87,7 @@ const Product = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
-          className="mt-16 p-8 border border-border rounded-lg bg-secondary/30 text-center"
+          className="mt-16 glass-card p-8 text-center"
         >
           <p className="text-muted-foreground font-inter text-sm">
             Technical details are shared with qualified partners and investors under NDA.

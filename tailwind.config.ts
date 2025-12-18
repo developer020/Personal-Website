@@ -67,8 +67,12 @@ export default {
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
+        xl: "calc(var(--radius) + 4px)",
+        "2xl": "calc(var(--radius) + 8px)",
+        "3xl": "calc(var(--radius) + 16px)",
+        "4xl": "2.5rem",
       },
       keyframes: {
         "accordion-down": {
@@ -95,6 +99,14 @@ export default {
           "0%": { strokeDashoffset: "100" },
           "100%": { strokeDashoffset: "0" },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "sphere-pulse": {
+          "0%, 100%": { transform: "scale(1)", opacity: "0.3" },
+          "50%": { transform: "scale(1.05)", opacity: "0.5" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -103,6 +115,8 @@ export default {
         "fade-in-scale": "fade-in-scale 0.5s ease-out forwards",
         "glow-pulse": "glow-pulse 4s ease-in-out infinite",
         "line-draw": "line-draw 1.5s ease-out forwards",
+        "float": "float 6s ease-in-out infinite",
+        "sphere-pulse": "sphere-pulse 8s ease-in-out infinite",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

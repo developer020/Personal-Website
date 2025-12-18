@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import productAuth from "@/assets/product-auth.jpg";
 
 const Problem = () => {
   const ref = useRef(null);
@@ -22,7 +23,7 @@ const Problem = () => {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Problem side */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -30,7 +31,7 @@ const Problem = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
           >
             <div className="space-y-8">
-              <div>
+              <div className="glass-card p-10">
                 <div className="font-syne text-6xl md:text-7xl font-bold text-champagne mb-4">
                   $1.79T
                 </div>
@@ -39,7 +40,7 @@ const Problem = () => {
                 </p>
               </div>
 
-              <div className="space-y-4 text-muted-foreground font-inter">
+              <div className="space-y-4 text-muted-foreground font-inter px-2">
                 <p className="leading-relaxed">
                   Counterfeiting is not a retail problem. It is a systemic failure of 
                   global trade infrastructure. Current solutions rely on reactive measures: 
@@ -52,19 +53,17 @@ const Problem = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
-                <div>
-                  <div className="font-syne text-2xl font-semibold text-foreground">3.3%</div>
-                  <p className="text-muted-foreground text-sm font-inter mt-1">of global trade</p>
-                </div>
-                <div>
-                  <div className="font-syne text-2xl font-semibold text-foreground">2.5M+</div>
-                  <p className="text-muted-foreground text-sm font-inter mt-1">jobs lost annually</p>
-                </div>
-                <div>
-                  <div className="font-syne text-2xl font-semibold text-foreground">100+</div>
-                  <p className="text-muted-foreground text-sm font-inter mt-1">industries affected</p>
-                </div>
+              <div className="grid grid-cols-3 gap-4">
+                {[
+                  { value: "3.3%", label: "of global trade" },
+                  { value: "2.5M+", label: "jobs lost annually" },
+                  { value: "100+", label: "industries affected" },
+                ].map((stat, index) => (
+                  <div key={index} className="glass-card p-4 text-center">
+                    <div className="font-syne text-xl font-semibold text-foreground">{stat.value}</div>
+                    <p className="text-muted-foreground text-xs font-inter mt-1">{stat.label}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
@@ -74,8 +73,19 @@ const Problem = () => {
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
+            className="space-y-8"
           >
-            <div className="border-gradient rounded-lg p-10 bg-card/50 backdrop-blur-sm relative overflow-hidden">
+            {/* Product image */}
+            <div className="float-image aspect-[4/3] relative overflow-hidden rounded-3xl">
+              <img 
+                src={productAuth} 
+                alt="NFC authentication technology" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            </div>
+
+            <div className="glass-card p-10 relative overflow-hidden">
               {/* Glow effect */}
               <div 
                 className="absolute top-0 right-0 w-40 h-40 opacity-20"
@@ -95,22 +105,17 @@ const Problem = () => {
                 </p>
                 
                 <ul className="space-y-4 text-muted-foreground font-inter">
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-champagne mt-2 flex-shrink-0" />
-                    <span>Verification happens at the device level, not the database level</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-champagne mt-2 flex-shrink-0" />
-                    <span>Automation eliminates human bottlenecks and error</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-champagne mt-2 flex-shrink-0" />
-                    <span>Infrastructure-level deployment enables global interoperability</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-champagne mt-2 flex-shrink-0" />
-                    <span>Scale without proportional cost increase</span>
-                  </li>
+                  {[
+                    "Verification happens at the device level, not the database level",
+                    "Automation eliminates human bottlenecks and error",
+                    "Infrastructure-level deployment enables global interoperability",
+                    "Scale without proportional cost increase"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-2 h-2 rounded-full bg-champagne mt-2 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

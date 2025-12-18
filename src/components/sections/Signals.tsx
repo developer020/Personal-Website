@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Sparkles, Cpu, Award } from "lucide-react";
 
 const Signals = () => {
   const ref = useRef(null);
@@ -7,6 +8,7 @@ const Signals = () => {
 
   const signals = [
     {
+      icon: Sparkles,
       category: "Partnerships",
       items: [
         "Active collaboration with global luxury stakeholders",
@@ -15,6 +17,7 @@ const Signals = () => {
       ]
     },
     {
+      icon: Cpu,
       category: "Technical Milestones",
       items: [
         "First device authentication automation technology developed",
@@ -23,6 +26,7 @@ const Signals = () => {
       ]
     },
     {
+      icon: Award,
       category: "Recognition",
       items: [
         "Featured in deep tech and fintech ecosystems",
@@ -49,15 +53,18 @@ const Signals = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {signals.map((signal, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.1 * index, ease: [0.4, 0, 0.2, 1] }}
-              className="space-y-6"
+              className="glass-card p-8 space-y-6"
             >
+              <div className="glass rounded-2xl w-12 h-12 flex items-center justify-center">
+                <signal.icon className="w-5 h-5 text-champagne" />
+              </div>
               <h3 className="font-syne text-lg font-semibold text-champagne">
                 {signal.category}
               </h3>
@@ -67,7 +74,7 @@ const Signals = () => {
                     key={itemIndex}
                     className="flex items-start gap-3 text-muted-foreground font-inter text-sm leading-relaxed"
                   >
-                    <span className="w-1 h-1 rounded-full bg-platinum-dim mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-platinum-dim mt-2 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -80,9 +87,9 @@ const Signals = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
-          className="mt-20 pt-12 border-t border-border text-center"
+          className="mt-20 glass-card p-10 text-center"
         >
-          <p className="text-muted-foreground font-inter italic">
+          <p className="text-platinum-dim font-inter text-lg italic">
             "We don't announce partnerships. We deliver outcomes."
           </p>
         </motion.div>
