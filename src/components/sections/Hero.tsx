@@ -40,7 +40,7 @@ const Hero = () => {
       />
 
       <div className="container-wide relative z-10 pt-20">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-            className="text-platinum-dim text-lg md:text-xl lg:text-2xl font-inter font-light max-w-xl mb-12 leading-relaxed"
+            className="text-platinum-dim text-lg md:text-xl lg:text-2xl font-inter font-light max-w-xl mx-auto mb-12 leading-relaxed"
           >
             Building the world's first global counterfeit eradication infrastructure.
           </motion.p>
@@ -73,7 +73,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button variant="hero" size="xl" onClick={scrollToContact} className="rounded-full">
               Contact

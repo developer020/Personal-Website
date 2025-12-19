@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import ayresLogo from "@/assets/ayres-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,19 +38,12 @@ const Navigation = () => {
         <div className={`glass-nav rounded-full px-4 py-3 flex items-center justify-between transition-all duration-500 ${
           isScrolled ? "shadow-lg" : ""
         }`}>
-          {/* Logo */}
+          {/* Scroll to top */}
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-3 group"
+            className="font-syne text-sm font-semibold text-foreground hover:text-champagne transition-colors"
           >
-            <img 
-              src={ayresLogo} 
-              alt="Ayres Originals" 
-              className="w-8 h-8 object-contain opacity-90 group-hover:opacity-100 transition-opacity"
-            />
-            <span className="font-syne text-sm font-semibold text-foreground hidden sm:block">
-              Zamzam Ali
-            </span>
+            Zamzam Ali
           </button>
 
           {/* Desktop navigation */}
