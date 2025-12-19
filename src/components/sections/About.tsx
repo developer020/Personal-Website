@@ -65,9 +65,9 @@ const About = () => {
                 execution with a sophisticated understanding of global trade systems.
               </p>
               <p className="text-muted-foreground font-inter leading-relaxed">
-                Her work is not about incremental improvement. It is about building what has 
-                never existed: a global, automated verification layer that operates across 
-                borders, supply chains, and industries.
+                Her work is not incremental. It is foundational. She is building what has 
+                never existed: a global, automated verification layer that quietly underpins 
+                trust across borders, supply chains, and industries.
               </p>
             </div>
           </div>

@@ -36,7 +36,7 @@ const Vision = () => {
           <p className="text-platinum-dim text-lg md:text-xl font-inter font-light leading-relaxed mb-12">
             We envision a global commerce ecosystem where every product carries verifiable 
             proof of authenticity. Not through labels, not through databases, but through 
-            infrastructure-level verification that operates invisibly and universally.
+            instant one-tap verification that operates invisibly and universally.
           </p>
         </motion.div>
 
