@@ -37,7 +37,7 @@ const About = () => {
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
-              <span className="text-champagne text-xs tracking-wider uppercase font-inter">Achievement</span>
+              <span className="text-champagne text-xs tracking-wider uppercase font-inter">Career</span>
               <p className="text-foreground font-syne text-xl font-semibold mt-1">CTO at 21</p>
             </motion.div>
           </motion.div>
@@ -84,7 +84,7 @@ const About = () => {
             { label: "Role", value: "Founder & CEO" },
             { label: "Company", value: "Ayres Originals" },
             { label: "Education", value: "LSE" },
-            { label: "Achievement", value: "CTO at 21" },
+            { label: "Career", value: "CTO at 21" },
           ].map((item, index) => (
             <div key={index} className="glass-card p-6 text-center">
               <span className="text-muted-foreground text-xs font-inter uppercase tracking-wider">
