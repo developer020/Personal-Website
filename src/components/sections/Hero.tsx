@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-24">
       {/* Background gradient */}
       <div 
         className="absolute inset-0"
@@ -20,20 +20,20 @@ const Hero = () => {
       
       {/* Floating sphere image */}
       <motion.div 
-        className="absolute top-1/2 right-0 md:right-[10%] -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] opacity-60"
-        animate={{ y: [0, -20, 0] }}
+        className="absolute top-1/2 right-0 md:right-[5%] -translate-y-1/2 w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[550px] lg:h-[550px] opacity-50 pointer-events-none"
+        animate={{ y: [0, -15, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       >
         <img 
           src={heroSphere} 
           alt="" 
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain rounded-full"
         />
       </motion.div>
       
       {/* Subtle glow effect */}
       <div 
-        className="absolute top-1/3 right-1/4 w-[600px] h-[600px] opacity-30 animate-sphere-pulse"
+        className="absolute top-1/3 right-1/4 w-[400px] h-[400px] md:w-[500px] md:h-[500px] opacity-20 animate-sphere-pulse pointer-events-none"
         style={{
           background: "radial-gradient(circle, hsl(220 20% 25% / 0.5) 0%, transparent 60%)"
         }}
@@ -67,8 +67,6 @@ const Hero = () => {
             className="text-platinum-dim text-lg md:text-xl lg:text-2xl font-inter font-light max-w-xl mb-12 leading-relaxed"
           >
             Building the world's first global counterfeit eradication infrastructure.
-            <br />
-            <span className="text-muted-foreground">CTO at 21. LSE. Category creator.</span>
           </motion.p>
 
           <motion.div
@@ -94,7 +92,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
