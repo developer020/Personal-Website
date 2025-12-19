@@ -59,7 +59,7 @@ const About = () => {
                 the infrastructure that will define the future of product authentication.
               </p>
               <p className="text-muted-foreground font-inter leading-relaxed">
-                As CTO at 21, she developed the first device authentication automation technology, 
+                She developed the first device authentication automation technology, 
                 establishing a new paradigm for how authenticity is verified at scale. 
                 Currently studying at the London School of Economics, she bridges deep technical 
                 execution with a sophisticated understanding of global trade systems.
