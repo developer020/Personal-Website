@@ -79,7 +79,7 @@ const Hero = () => {
               Contact
             </Button>
             <Button variant="platinum" size="xl" asChild className="rounded-full">
-              <a href="https://linkedin.com/in/zamzamali" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/zamzam-ali-founder/" target="_blank" rel="noopener noreferrer">
                 LinkedIn
               </a>
             </Button>

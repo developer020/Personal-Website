@@ -157,7 +157,7 @@ const Contact = () => {
           >
             {[
               { href: "https://calendly.com", icon: Calendar, label: "Schedule a call" },
-              { href: "https://linkedin.com/in/zamzamali", icon: Linkedin, label: "Connect on LinkedIn" },
+              { href: "https://www.linkedin.com/in/zamzam-ali-founder/", icon: Linkedin, label: "Connect on LinkedIn" },
               { href: "mailto:contact@ayresoriginals.com", icon: Mail, label: "Direct email" },
             ].map((item, index) => (
               <a 
