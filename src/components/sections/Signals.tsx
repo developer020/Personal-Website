@@ -90,7 +90,7 @@ const Signals = () => {
           className="mt-20 glass-card p-10 text-center"
         >
           <p className="text-platinum-dim font-inter text-lg italic">
-            "We don't announce partnerships. We deliver outcomes."
+            "We deliver outcomes."
           </p>
         </motion.div>
       </div>
