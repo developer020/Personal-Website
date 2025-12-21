@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
+# Zamzam Ali Personal Website 🚀  
+**Founder & CEO, Ayres Originals**
 
-## Project info
+This repository contains the source code for the personal professional website of **Zamzam Ali**, Founder and CEO of **Ayres Originals**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The website serves as a clean, high-signal digital presence for qualified viewers.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Overview 🎯
 
-**Use Lovable**
+- Single-scroll professional website  
+- Built for clarity, credibility, and long-term use  
+- Intended for investors, grant providers, and strategic partners  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+This repository does not contain product logic, research, or proprietary systems.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## Tech Stack ⚙️
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+> Stack may vary depending on deployment.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Framework: React / Next.js
+- Styling: Tailwind CSS or modern CSS-in-JS
+- Animations: Lightweight, performance-focused libraries
+- Integrations:
+  - Calendly 📅
+  - LinkedIn 🔗
+- Hosting: Vercel or equivalent
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Site Structure 🧱
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Single-scroll layout
+- Minimal sections
+- No CMS
+- No blog
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Development Notes 🧠
 
-**Edit a file directly in GitHub**
+- Performance-optimized
+- Accessibility-conscious
+- SEO-aware metadata
+- Dark-mode–first design
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Contributions 🔒
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This repository is not open to external contributions.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## License 📜
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+All rights reserved.  
+Content, branding, and materials are proprietary to Zamzam Ali and Ayres Originals.
